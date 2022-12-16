@@ -1,5 +1,6 @@
 {
   "name": "ichat",
+  "homepage": "https://yashpalsinh031.github.io/Chat/",
   "version": "1.0.0",
   "description": "Real time chat app with rooms",
   "main": "server.js",
@@ -40,6 +41,7 @@
     "fresh": "^0.5.2",
     "function-bind": "^1.1.1",
     "get-intrinsic": "^1.1.2",
+    "gh-pages": "^4.0.0",
     "glob-parent": "^5.1.2",
     "has": "^1.0.3",
     "has-flag": "^3.0.0",
@@ -101,7 +103,10 @@
     "ws": "^8.2.3"
   },
   "scripts": {
+    "predeploy": "npm run build",
+   "deploy": "gh-pages -d build",
     "start": "node server",
+    "build": "node server build",
     "dev": "nodemon server"
   },
   "author": "Yashpalsinh Gohil",
